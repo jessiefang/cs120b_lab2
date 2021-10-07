@@ -16,15 +16,13 @@
 # altered in between executions (unless preconditions are used).
 
 
-tests = [ {'description': 'PINA: 0x00, PINB: 0x00 => PORTC: 0x00',
-    'steps': [ {'inputs': [('PINA',0x00)], 'iterations': 5 },
-	       {'inputs': [('PINB',0x00)], 'iterations': 5 }, ],
-    'expected': [('PORTC',0x00)],
+tests = [ {'description': 'PINA: 0x00 => PORTC: 0x40',
+    'steps': [ {'inputs': [('PINA',0x00)], 'iterations': 5 }, ],
+    'expected': [('PORTC',0x40)],
     },
-    {'description': 'PINA: 0x01, PINB: 0x10 => PORTC: 0x02',
-    'steps': [ {'inputs': [('PINA',0x01)], 'iterations': 5 }, 
-               {'inputs': [('PINB',0x10)], 'iterations': 5 }, ],
-    'expected': [('PORTC',0x02)],
+    {'description': 'PINA: 0x0D  => PORTC: 0x3F',
+    'steps': [ {'inputs': [('PINA',0x0D)], 'iterations': 5 }, ], 
+    'expected': [('PORTC',0x3F)],
     },
 
     ]
