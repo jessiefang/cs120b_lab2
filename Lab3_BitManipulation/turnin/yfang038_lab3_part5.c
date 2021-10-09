@@ -19,7 +19,7 @@ int main(void) {
 	unsigned char total = 0x00;
     /* Insert your solution below */
     while (1) {
-    	total = PIND + PINB;
+    	total = (PIND << 1) | PINB;
 	if(total >= 70){
 		PORTB = 0x02;
 	}
