@@ -16,8 +16,8 @@
 # altered in between executions (unless preconditions are used).
 
 
-tests = [ {'description': 'PIND: 0x23 => PORTB = 0x00, PORTB: 0x02',
-    'steps': [ {'inputs': [('PIND',0x23)], 'iterations': 5 },
+tests = [ {'description': 'PIND: 0x80 => PORTB = 0x00, PORTB: 0x02',
+    'steps': [ {'inputs': [('PIND',0x80)], 'iterations': 5 },
 	       {'inputs': [('PINB',0x00)], 'iterations': 5 }, ], 
     'expected': [('PORTB',0x02) ],
     },
