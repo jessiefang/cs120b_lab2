@@ -42,7 +42,7 @@ int main(void) {
         }
 	//level 10-12, lights 1-5
 	if((tmpA & 0x0A) ==0x0A || (tmpA & 0x0B) == 0x0B || (tmpA & 0x0C) == 0x0C){
-                PORTC = 0x6E;
+                PORTC = 0x3E;
         }
 	//level 13-15, lights 0-5
 	if((tmpA & 0x0D) ==0x0D || (tmpA & 0x0E) == 0x0E || (tmpA & 0x0F) ==0x0F){
