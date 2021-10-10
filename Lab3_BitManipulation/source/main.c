@@ -14,21 +14,24 @@
 
 int main(void) {
     /* Insert DDR and PORT initializations */
-	DDRB = 0xFE; PORTB = 0x00;
-	DDRD = 0x00; PORTD = 0x00;
+	DDRB = 0xFE; PORTB = 0x01;
+	DDRD = 0x00; PORTD = 0xFF;
 	unsigned char total = 0x00;
+	unsigned char output = 0x00;
     /* Insert your solution below */
     while (1) {
-    	total = (PIND << 1) | PINB;
+    	total = (PIND << 1) | (PINB & 0x01);
 	if(total >= 70){
-		PORTB = 0x02;
+		output = 0x02;
 	}
 	else if(total > 5){
-		PORTB = 0x04;
+		output = 0x04;
 	}
 	else{
-		PORTB = 0x00;
+		output = 0x00;
 	}
+	PORTB = output;
+    	output = 0x00;
     }    
     return 1;
 }
