@@ -14,8 +14,8 @@
 
 int main(void) {
     /* Insert DDR and PORT initializations */
-	DDRB = 0xFE; PORTB = 0x01;
-	DDRD = 0x00; PORTD = 0xFF;
+	DDRB = 0xFE; PORTB = 0x00;
+	DDRD = 0x00; PORTD = 0x00;
 	unsigned char total = 0x00;
     /* Insert your solution below */
     while (1) {
